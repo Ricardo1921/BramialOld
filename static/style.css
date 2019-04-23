@@ -1,0 +1,175 @@
+body {
+  background-color: #EEE;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+shop {
+  display: block;
+  font-size: 1em;
+  color: #C11;
+  margin-top:16px;
+  margin-bottom:16px;
+}
+
+moeda {
+  display: block;
+  color: #1C1;
+  font-weight: bold;
+}
+
+input, textarea {
+  padding: 5px 15px;
+}
+
+td img {
+    width: 170px;
+    width: 170px;
+    width: 170px;
+    width: 170px;
+}
+
+input[type=text], input[type=password] {
+  width: 256px;
+}
+
+fieldset {
+  width: 256px;
+  padding: 50px;
+  background-color: lightgray;
+  border: 2px groove;
+}
+
+table, td {
+  background-color: lightgray;
+  border: 30px solid lightgray;
+  border-collapse: collapse;
+}
+
+td {
+  background-color: white;
+  text-align: center;
+  padding: 30px 10px;
+  width: 256px;
+  vertical-align: bottom;
+}
+
+.navbar user {
+  float: right;
+  padding: 12px;
+  color: #ff8;
+  text-decoration: none;
+  font-size: 17px;
+  background-color: #000;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+}
+
+.navbar a {
+  float: left;
+  padding: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #0e83d1;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+  }
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    display: flex;
+}
+
+.icons {
+    padding: 50px 100px;
+}
+
+.phone i {
+    background-color: #222;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.email i {
+    background-color: #222;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.marker i {
+    background-color: #222;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.phone p {
+    display: inline-block;
+    padding: 10px;
+}
+
+.email p {
+    display: inline-block;
+    padding: 10px;
+}
+
+.marker p {
+    display: inline-block;
+    padding: 10px;
+}
+
+.info {
+    padding: 50px 100px;
+}
+
+
+.info-title {
+    letter-spacing: 1px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.info-content {
+    background-color: #222;
+    padding: 10px;
+    font-size: 15px;
+    line-height: 25px;
+    width: 400px;
+}
+
+.info div {
+    display: flex;
+    font-size: 30px;
+}
+
+.info div div {
+    padding: 0px 30px 0px 0px; /* 0 = cima \\ 30 = direita \\ 0 = baixo \\ 0 = esquerda */
+}
+
+.info div i {
+    background-color: #222;
+    padding: 8px;
+    color: white;
+    border-radius: 10px;
+}

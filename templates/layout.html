@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<link rel="shortcut icon" href="/static/favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/static/style.css">
+{% block titulo %}
+{% endblock %}
+
+<script type="text/javascript" src="/static/scroll.js"></script>
+<body>
+
+{% set livro = loja.livro %}
+{% set menu = loja.produtos %}
+{% set usr = loja.usr.id %}
+{% set carrinho = loja.carrinho %}
+{% set unidades = loja.unidades %}
+{% set total = loja.total() %}
+
+{% set icons = ['fas fa-question', 'fab fa-palfed', 'fas fa-door-open', 'fas fa-clone'] %}
+<div class="navbar">
+  <a class="active" href="/"><i class="fa fa-fw fa-home"></i> Home</a>
+  {% for nome in menu %}
+  <a href="/pr/{{ nome.title }}"><i class="{{ icons.pop() }}"></i> {{ nome.title }}</a>
+  {% endfor %}
+  <a href="/carrinho"><i class="fas fa-shopping-cart"></i> Carrinho</a>
+  {% if usr %}
+  <a href="/logout"><i class="fa fa-fw fa-user"></i> Logout</a>
+  <user><i class="fa fa-fw fa-user-tie"></i> {{ usr }}</user>
+  {% else %}
+  <a href="/login"><i class="fa fa-fw fa-lock"></i> Login</a>
+  <a href="/registo"><i class="fa fa-fw fa-user"></i> Registo</a>
+  {% endif %}
+</div>
+{% block conteudo %}
+{% endblock %}
+
+<br><center>
+<h3>&copy; Copyright 2019 Ricardo OLiveira</h3>
+</center>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2986.548590059441!2d-8.460911984370984!3d41.53571779474898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd24ff36ef98a501%3A0x8b0a5ed3086ece29!2sR.+da+Venda+de+Cima+2%2C+Braga!5e0!3m2!1spt-PT!2spt!4v1556024299211!5m2!1spt-PT!2spt" width="500" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+<footer class="footer">
+    <div class="icons">
+        <div class="phone">
+            <i class="fas fa-phone"></i>
+            <p>926857339</p>
+        </div>
+
+        <div class="email">
+            <i class="fas fa-envelope"></i>
+            <p>ricardojorgexavier2003@gmail.com</p>
+        </div>
+
+        <div class="marker">
+            <i class="fas fa-map-marked-alt"></i>
+            <p>Rua Quinta das Glicinas 49 2ºDT</p>
+        </div>
+    </div>
+
+    <div class="info">
+        <p class="info-title">Sobre a Loja</p>
+        <p class="info-content">Este é um mini projeto dedicado à compra de produtos online. Feito no âmbito da disciplina de PSI</p>
+        <div>
+            <div>
+                <a href="http://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div>
+                <a href="http://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+</footer>
+</body>
+</html>
