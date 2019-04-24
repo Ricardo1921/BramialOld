@@ -95,6 +95,6 @@ def logout():
     loja.reset()
     return redirect('/')
 
-
+# Isto e um teset para o Github
 if __name__ == '__main__':
     app.run(debug=True)
