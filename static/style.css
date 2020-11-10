@@ -2,6 +2,7 @@ body {
   background-color: #EEE;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background-image: url("/static/images/ricardo.png");
 }
 
 shop {
@@ -55,7 +56,7 @@ td {
 }
 
 .navbar user {
-  float: right;
+  float: center;
   padding: 12px;
   color: #ff8;
   text-decoration: none;
@@ -64,27 +65,26 @@ td {
 }
 
 .navbar {
-  width: 100%;
-  background-color: #555;
+  float: center;
+  width: 58%;
+  background-color: white;
   overflow: auto;
-  position: fixed;
   top: 0;
 }
 
 .navbar a {
   float: left;
   padding: 20px;
-  color: white;
+  color: black;
   text-decoration: none;
   font-size: 17px;
 }
 
-.navbar a:hover {
-  background-color: #000;
-}
 
 .active {
-  background-color: #0e83d1;
+    color: black;
+    background-color: white;
+    float: left;
 }
 
 @media screen and (max-width: 500px) {
@@ -94,9 +94,15 @@ td {
 }
 
 .footer {
-    background-color: #333;
-    color: white;
+    background-color: white;
+    color: black;
     display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1px 100px;
 }
 
 .icons {
@@ -104,21 +110,21 @@ td {
 }
 
 .phone i {
-    background-color: #222;
+    background-color: white;
     padding: 12px;
     cursor: pointer;
     border-radius: 100%;
 }
 
 .email i {
-    background-color: #222;
+    background-color: white;
     padding: 12px;
     cursor: pointer;
     border-radius: 100%;
 }
 
 .marker i {
-    background-color: #222;
+    background-color: white;
     padding: 12px;
     cursor: pointer;
     border-radius: 100%;
@@ -151,7 +157,7 @@ td {
 }
 
 .info-content {
-    background-color: #222;
+    background-color: white;
     padding: 10px;
     font-size: 15px;
     line-height: 25px;
@@ -163,13 +169,9 @@ td {
     font-size: 30px;
 }
 
-.info div div {
-    padding: 0px 30px 0px 0px; /* 0 = cima \\ 30 = direita \\ 0 = baixo \\ 0 = esquerda */
-}
-
 .info div i {
-    background-color: #222;
+    background-color: white;
     padding: 8px;
-    color: white;
+    color: black;
     border-radius: 10px;
 }
